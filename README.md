@@ -12,16 +12,16 @@ An educational information-retrieval project for searching Persian news with cla
 
 > Classical Persian news search using Hazm/Parsivar NLP preprocessing, positional inverted indexing, proximity-aware heuristic scoring, and ranked document retrieval.
 
-## AI/ML status
+## Retrieval method
 
-**AI/ML status: yes, this is AI-related through classical NLP and information retrieval, but it does not train a machine-learning or neural model.** The implementation uses computational-linguistics tools and symbolic ranking:
+This project applies **classical NLP and information retrieval** to Persian news. The implementation uses computational-linguistics tools and symbolic ranking:
 
 - Hazm and Parsivar for Persian normalization, tokenization, lemmatization, and stemming.
 - An inverted index that maps terms to matching document IDs and token positions.
 - A hand-designed relevance score based on document presence, repeated occurrences, and adjacent query terms.
 - A `!` query operator that removes documents containing the following term.
 
-There are no embeddings, transformers, classifiers, neural networks, or learned ranking weights in the current code. This makes the project a strong, interpretable baseline for Persian search and a clear foundation for later BM25, learning-to-rank, or dense-retrieval experiments.
+The current ranking is deliberately inspectable and provides a clear baseline for later BM25, learning-to-rank, or dense-retrieval experiments.
 
 ## What the project demonstrates
 
@@ -197,8 +197,4 @@ Both Python source files compile syntactically with:
 python3 -m py_compile P1.py ir_project_parsivar.py
 ```
 
-The full search pipeline was not executed in this environment because Hazm/Parsivar and the referenced JSON datasets are not installed or present in the cloned repository. The preview image is based on the project’s stored notebook outputs and actual preprocessing/indexing/scoring logic; it is a software-oriented retrieval view rather than an AI-generated illustration.
-
-## License
-
-No license file is currently included. Add a license before distributing or reusing the project outside its original educational context.
+The full search pipeline was not executed in this environment because Hazm/Parsivar and the referenced JSON datasets are not installed or present in the cloned repository. The preview image is based on the project’s stored notebook outputs and actual preprocessing, indexing, and scoring logic.
